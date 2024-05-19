@@ -1,10 +1,11 @@
+import { useEffect } from "react"
 import React from "react";
 import styled from "styled-components";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
-import { Plans } from "./Plans";
 
 export const Home = () => {
+
   return (
     <Container>
       <Header>
