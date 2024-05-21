@@ -48,6 +48,9 @@ export const Dashboard = () => {
           <h1>482.4</h1>
         </Puan>
       </Home>
+      <Main> 
+        
+      </Main>
     </Container>
   );
 };
@@ -136,6 +139,9 @@ const Puan = styled.div`
     background-color: #353a50;
     padding: 5px 40px;
 `
+
+const Main = styled.div``
+
 
 
 
