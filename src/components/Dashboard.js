@@ -9,16 +9,9 @@ import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import CommentIcon from "@mui/icons-material/Comment";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import SearchIcon from "@mui/icons-material/Search";
-import { Data } from "../utils/Data";
-import BarChart from "../components/BarChart";
-import Chart, { CategoryScale } from "chart.js/auto";
-
-Chart.register(CategoryScale);
+import { BarChart } from "./BarChart";
 
 export const Dashboard = () => {
-  const [chartData, setChartData] = useState({
-
-  });
   return (
     <Container>
       <BgColor>
@@ -55,10 +48,10 @@ export const Dashboard = () => {
           <h3>En İyi Puan</h3>
           <h1>482.4</h1>
         </Puan>
+        <Main>
+          <BarChart />
+        </Main>
       </Home>
-      <Main>
-      <BarChart chartData={chartData} />
-      </Main>
     </Container>
   );
 };
@@ -146,7 +139,12 @@ const Puan = styled.div`
   padding: 5px 40px;
 `;
 
-const Main = styled.div``;
+const Main = styled.div`
+  margin-top: 3%;
+  max-width: 25%;
+  max-height: 25%;
+  border-radius: 5%;
+  background-color: #353a50;
+  padding: 5px 40px;
 
-
-
+`;

@@ -1,22 +1,27 @@
 import { Bar } from "react-chartjs-2";
-export const BarChart = ({ chartData }) => {
-  return (
-    <div className="chart-container">
-      <h2 style={{ textAlign: "center" }}>Bar Chart</h2>
-      <Bar
-        data={chartData}
-        options={{
-          plugins: {
-            title: {
-              display: true,
-              text: "Users Gained between 2016-2020"
-            },
-            legend: {
-              display: false
-            }
-          }
-        }}
-      />
-    </div>
-  );
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Title,
+  Legend,
+} from "chart.js";
+import { barChartData } from "../utils/Data"
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+)
+
+export const BarChart = () => {
+
+  const options = {};
+
+  return <Bar options={options} data={barChartData} />;
 };
